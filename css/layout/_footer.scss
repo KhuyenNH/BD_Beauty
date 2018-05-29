@@ -1,0 +1,20 @@
+/*  Footer
+------------------------------------*/
+.footer {
+    // @extend %clearfix;
+    color: $color-a;
+    background: url('../images/bg_footer.jpg') repeat-x;
+    background-size: 100% 100%;
+    padding: 95px 0 50px;
+    a {
+        color: $color-a;
+    }
+    .listItems {
+        justify-content: center;
+        margin: auto;
+    }
+    .copyright {
+        padding-top: 1rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,59 @@
+/*-----------------------
+        Responsive for device < 1200
+-----------------------------------------*/
+@include mqLg {
+    .container {
+        padding: 0 15px;
+    }
+}
+/*-----------------------
+        Responsive for device < 640
+-----------------------------------------*/
+@include mqSm {
+    .is_pc {
+        display: none;
+    }
+    .is_sp {
+        display: inherit;
+    }
+    .title_h2 {
+        // font-size: 24px;
+        // color: $color-primary;
+        // line-height: 1.8;
+        // font-weight: bold;
+    }
+    .title_h3 {
+        // font-size: 24px;
+        // line-height: 1.8;
+        // color: $color-primary;
+        // font-weight: bold;
+    }
+    .title_h4 {
+        // font-size: 24px;
+        // color: $color-primary;
+        // line-height: 1.8;
+        // font-weight: bold;
+    }
+    .text {
+        // padding:
+        // font-size: ;
+        // color:
+    }
+
+    .main_visual {
+        height: 48vh;
+        .highlight {
+            max-height: inherit;
+            padding: 3vw 0;
+            .listItems {
+                align-items: center;
+            }
+            .items {
+                &.logo_02 {
+                    margin-top: -38px;
+                    margin-bottom: -38px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+AuthUserFile /home/borderporter/borderporter.jp/public_html/test/member23/ikegami/.htpasswd
+AuthGroupFile /dev/null
+AuthName "ID and PASS?"
+AuthType Basic
+require valid-user

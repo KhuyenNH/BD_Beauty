@@ -1,14 +1,17 @@
 /*------------------- Wraper -------------------*/
 .wrapper {
     // ...
-    background: #e9f2f3;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    background: #fff;
 }
 .clearfix {
     @extend %clearfix;
 }
 .container {
     // @extend %clearfix;
-    max-width: 1000px;
+    max-width: 988px;
     width: 100%;
     margin: 0 auto;
     // padding: 0 25px;
@@ -52,10 +55,12 @@
 .text {
     // padding:
     @include fontSize(2.2);
+    @include mqLg {
+        font-size: 1.8vw;
+    };
     @include mqSm {
         @include fontSize(1, sp);
     };
-    // color:
 }
 .text-check {
     position: relative;
@@ -103,36 +108,15 @@
         display: inline-block;
         border: 1px solid $link-color;
         @include fontSize(1.5);
+        @include mqLg {
+            font-size: 1.3vw;
+        }
         @include mqSm {
             line-height: 1.4;
             @include fontSize(0.8, sp);
         };
     }
 }
-// /*------------------- Form -------------------*/
-input {
-    // padding:
-    // border:
-    &:focus {
-
-    }
-}
-select {
-    // padding:
-    // border:
-}
-textarea {
-    // padding:
-    // border:
-}
-.btn {
-    // padding:
-    // border:
-    // background:
-    // font-size:
-    // color:
-}
-
 /*------------------- List -------------------*/
 .listItems {
     display: flex;

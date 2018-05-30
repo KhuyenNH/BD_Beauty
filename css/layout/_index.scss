@@ -1,22 +1,32 @@
 /*  main_visual
 ------------------------------------*/
+
+.listTag {
+    display: none;
+    background: url('../images/bg_tag.jpg') no-repeat;
+    background-size: 100% 100%;
+}
 .main_visual {
     position: relative;
-    background: url('../images/bg_main.jpg') no-repeat center top;
+    background: url('../images/bg_main.jpg') no-repeat top left;
     background-size: cover;
     height: 790px;
-    padding: 17px 17px;
+    padding: 0 17px 17px;
+    .container {
+        position: relative;
+    }
     .main_visual_in {
         display: flex;
         justify-content: flex-end;
     }
     .logo {
         position: absolute;
-        top: 17px;
-        left: 17px;
+        top: 11px;
+        left: 0;
         width: 17%;
     }
     .title_main {
+        margin-right: -4%;
         width: 79.7%;
     }
     .highlight {
@@ -26,7 +36,7 @@
         bottom: 0;
         padding: 20px 0;
         max-height: 182px;
-        background: rgba(210, 141, 156, 0.7);
+        background: #e389a8;
         .listItems {
             justify-content: space-between;
             // align-items: center;
@@ -34,28 +44,49 @@
         .items {
             // width: 33.3%;
             &:first-child {
-                width: 34.6%;
+                position: relative;
+                // width: 34.6%;
+                width: 35%;
+                @include mqSm {
+                    width: 50%;
+                };
+                &:after {
+                    content: "";
+                    top: 12%;
+                    right: 0px;
+                    position: absolute;
+                    height: 72%;
+                    border-left: 4px dotted #fff;
+                    @include mqSm {
+                        top: 0;
+                        height: 100%;
+                        border-left: 2px dotted #fff;
+                    };
+                }
             }
             &:nth-child(2) {
-                width: 38.3%;
-                padding-left: 25px;
+                // width: 38.3%;
+                width: 38%;
+                padding-left: 2%;
+                @include mqSm {
+                    width: 50%;
+                };
             }
             &:nth-child(3) {
-                width: 27%;
-                padding-left: 18px;
+                width: 26%;
+                padding-left: 1.5%;
             }
             &.logo_02 {
                 position: relative;
-                // margin-top: -34px;
-                margin-top: -52px;
-                margin-bottom: -38px;
+                margin-top: -35px;
+                margin-bottom: -20px;
             }
             .ico_tw {
-                width: 30%;
+                width: 24%;
                 margin: auto;
                 position: absolute;
-                top: 24%;
-                left: 18px;
+                top: 14%;
+                left: 38%;
                 right: 0;
                 text-align: center;
             }
@@ -73,35 +104,68 @@
         }
     }
     .row_01 {
-        padding: 100px 0 77px;
-        height: 510px;
+        padding: 58px 0 77px;
+        // height: 510px;
         background: url('../images/bnr_01.jpg') no-repeat top center;
         background-size: cover;
+        @include mqLg {
+            padding: 4.8vw 0 6.4vw;
+
+        };
         .avatar {
-            padding-top: 36px;
-            padding-left: 79px;
-            max-width: 346px;
+            padding-left: 25px;
+            // max-width: 346px;
             width: 29%;
         }
         .description {
             text-align: center;
-            padding-left: 8rem;
-            padding-right: 3rem;
-            max-width: 654px;
-            width: 71%;
+            // padding-top: 65px;
+            padding-left: 51px;
+            // max-width: 654px;
+            width: 100%;
+            max-width: 492px;
+            margin: auto;
+            @include mqLg {
+                width: 71%;
+                padding-left: 4.3vw;
+            };
+        }
+        .txt_img {
+            text-align: center;
+            img {
+                // width: 94.5%;
+                @include mqLg {
+                    width: 35vw;
+                };
+                @include mqSm {
+                    width: 100%;
+                };
+            }
         }
         .txt_01 {
-            max-width: 520px;
+            border-top: 1px solid $link-color;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // max-width: 520px;
             margin: auto;
-            padding-top: 75px;
+            margin-top: 15px;
+            padding-top: 5px;
             color: $link-color;
             text-align: left;
-            .text {
-                padding-bottom: 8px;
-                margin-bottom: 8px;
-                @include fontSize(1.8);
-                border-bottom: 1px solid $link-color;
+            @include mqSm {
+                flex-direction: column;
             }
+            .text {
+                @include fontSize(1.8);
+            }
+        }
+        .tag span {
+            margin-top: 0;
+            @include mqSm {
+                // display: block;
+                margin-top: 1vw;
+            };
         }
     }
     // row_02
@@ -134,18 +198,68 @@
             .text {
                 padding-top: 2px;
                 @include fontSize(2);
+                @include mqLg {
+                    font-size: 1.7vw;
+                };
             }
         }
         .img_bnr {
+            iframe {
+                width: 100%;
+                height: 380px;
+            }
             padding-top: 40px;
         }
     }
     // row_03
     .row_03 {
+        background: $color-a;
         color: $color-a;
-        .wrap_12 {
+        .row_03_first {
+            background: url('../images/bg_pinkGradient_01.jpg') no-repeat;
+            background-size: 100% 100%;
+            padding: 100px 0;
+            .text {
+                line-height: 2;
+                @include fontSize(1.6);
+                @include mqLg {
+                    font-size: 1.3vw;
+                };
+                @include mqSm {
+                    @include fontSize(1, sp);
+                };
+                &:not(:last-child) {
+                    padding-bottom: 45px;
+                }
+            }
+        }
+        .content_left {
+            width: 50%;
+            @include mqSm {
+                width: 60%;
+            }
+        }
+        .content_right {
+            padding-top: 40px;
+            width: 50%;
             display: flex;
-            flex-wrap: wrap;
+            justify-content: flex-end;
+            padding-left: 3.5vw;
+            @include mqSm {
+                padding-top: 0;
+                width: 40%;
+                flex-direction: column;
+                align-items: flex-end;
+            };
+            .thumb_product {
+                padding: 0 28px;
+                @include mqLg {
+                    padding: 0 2.3vw;
+                };
+                @include mqSm {
+                    padding: 2vw 1vw;
+                }
+            }
         }
         .title_h3 {
             margin-top: -0.8rem;
@@ -153,23 +267,20 @@
             padding-bottom: 8px;
         }
         .thumb_left {
-            // background: url('../images/thumb_05.png') no-repeat;
-            // background-size: 100%;
-            // width: 23%;
             width: 36%;
         }
         .content {
-            background: url('../images/bg_pinkGradient.png') no-repeat;
+            background: url('../images/bg_pinkGradient.jpg') no-repeat;
             background-size: 100% 100%;
             // width: 77%;
             width: 64%;
-            padding: 55px 45px 45px;
+            padding: 55px 0px 45px 45px;
             .text {
                 @include fontSize(1.6);
                 line-height: 1.9;
             }
         }
-        .listItems {
+        .news_thumb {
             &:not(:last-child) {
                 padding-bottom: 4.5rem;
             }
@@ -178,13 +289,15 @@
             width: 124px;
         }
         .description {
-            max-width: 511px;
+            // max-width: 511px;
+            max-width: 530px;
             width: 100%;
             padding-left: 30px;
         }
     }
     // row_04
     .row_04 {
+        background: $color-a;
         color: $color-a;
         .wrap_12 {
             display: flex;
@@ -192,20 +305,20 @@
         }
         .title_h4 {
             font-weight: bold;
-            padding-bottom: 1.7rem;
+            padding-bottom: 2rem;
         }
         .txt_content {
-            &.pb20 {
-                padding-bottom: 2rem;
+            &.pb55 {
+                padding-bottom: 5.5rem;
             }
         }
         .text-check {
             margin-left: 3rem;
         }
         .content {
-            padding: 72px 0 0 100px;
+            padding: 90px 0 0 100px;
             width: 56.5%;
-            background: url('../images/bg_pinkGradient_02.png') no-repeat;
+            background: url('../images/bg_pinkGradient_02.jpg') no-repeat;
             background-size: 100% 100%;
         }
         .thumb_right {
@@ -215,7 +328,7 @@
             max-width: 516px;
             width: 100%;
             margin-right: -1rem;
-            // justify-content: space-between;
+            justify-content: center;
             &.vacant {
                 // justify-content: flex-start;
             }
@@ -231,6 +344,81 @@
             .text {
                 @include fontSize(1.6);
             }
+        }
+    }
+    // row_05
+    .row_05 {
+        background: url('../images/bg_gradient_pink.png') no-repeat;
+        background-size: 100% 100%;
+        padding: 65px 0 75px;
+        .listItems {
+            max-width: 738px;
+            width: 100%;
+            margin: auto;
+            justify-content: space-between;
+            @include mqLg {
+                // max-width: 55.4vw;
+            };
+        }
+        .txt_img {
+            text-align: center;
+            @include mqLg {
+                img {
+                    // width: 14.5vw;
+                    width: 69.5%;
+                }
+            };
+        }
+        .txt_01 {
+            // width: 470px;
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            color: $color-a;
+            text-align: center;
+            @include mqLg {
+                // width: 39vw;
+            };
+            .text {
+                padding-bottom: 8px;
+                margin-bottom: 8px;
+                @include fontSize(3);
+                border-bottom: 1px solid $color-a;
+                @include mqLg {
+                    font-size: 2.4vw;
+                };
+            }
+            .tag {
+                span {
+                    border: 1px solid $color-a;
+                }
+            }
+        }
+        .avatar {
+            // width: 190px;
+            width: 38%;
+            // padding-left: 165px;
+            @include mqLg {
+                // width: 15.8vw;
+            };
+        }
+        .description {
+            // width: 475px;
+            width: 62%;
+            @include mqLg {
+                // width: 39.5vw;
+            };
+            span {
+                @include fontSize(2.1);
+                @include mqLg {
+                    font-size: 1.7vw;
+                };
+            }
+        }
+        .button {
+            padding-top: 20px;
+            width: 100%;
+            text-align: center;
         }
     }
 }
@@ -278,7 +466,7 @@
 /*  local_03
 ------------------------------------*/
 .local_03 {
-    background: $color-primary;
+    background: #fbcfde;
     position: relative;
     &:before {
         content: "";
@@ -296,7 +484,7 @@
         z-index: 9;
     }
     a {
-        color: $color-a;
+        color: $link-color;
     }
     .title_h2 {
         padding-top: 1.5rem;
@@ -309,7 +497,7 @@
         padding-left: 25px;
     }
     .listItems {
-        padding: 103px 0 45px;
+        padding: 143px 0 45px;
         justify-content: space-between;
         .items {
             width: 32.5%;
@@ -328,12 +516,85 @@
     }
     .text {
         @include fontSize(1.6);
-        padding-bottom: 50px;
+        padding-bottom: 75px;
     }
 }
-/*  Local_01
+/*  main_visual_02
 ------------------------------------*/
-/*  Local_01
-------------------------------------*/
-/*  Local_01
-------------------------------------*/
+.main_visual_02 {
+    background: url('../images/bg_main.jpg') no-repeat bottom left;
+    position: relative;
+    background-size: cover;
+    height: 790px;
+    padding-top: 40px;
+    .container {
+        position: relative;
+    }
+    .main_visual_in {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    .title_main {
+        text-align: right;
+        margin-right: -2.7%;
+        width: 79.7%;
+    }
+    .box_main {
+        width: 74%;
+        margin-top: 24px;
+        margin-right: -0.3%;
+        text-align: right;
+    }
+    .highlight {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 25px 0;
+        max-height: 182px;
+        background: #e389a8;
+        .listItems {
+            justify-content: space-between;
+            // align-items: center;
+        }
+        .items {
+            // width: 33.3%;
+            position: relative;
+            &:first-child {
+                padding-top: 18px;
+                @include mqLg {
+                    padding-top: 1vw;
+                };
+                // width: 34.6%;
+                padding-left: 7.5%;
+                width: 29%;
+            }
+            &:nth-child(2) {
+                // width: 38.3%;
+                width: 34.3%;
+                padding-right: 3%;
+            }
+            &:nth-child(3) {
+                width: 36.6%;
+                padding-right: 5.5%;
+            }
+            &.logo_02 {
+                position: relative;
+                margin-top: -35px;
+                margin-bottom: -20px;
+            }
+            .ico_tw {
+                width: 49%;
+                margin: auto;
+                position: absolute;
+                top: 45%;
+                left: 12%;
+                right: 0;
+                text-align: center;
+            }
+        }
+    }
+}
+// /*  Local_01
+// ------------------------------------*/

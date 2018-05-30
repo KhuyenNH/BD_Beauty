@@ -1,6 +1,7 @@
 /*------------------- Wraper -------------------*/
 .wrapper {
     // ...
+    background: #e9f2f3;
 }
 .clearfix {
     @extend %clearfix;
@@ -31,6 +32,7 @@
     @include fontSize(3);
     color: $link-color;
     font-weight: bold;
+
 }
 .title_h4 {
     @include fontSize(3);
@@ -38,19 +40,41 @@
 }
 .title_h5 {
     color: $blue;
+    font-weight: bold;
+    padding-bottom: 20px;
+    letter-spacing: 1.6px;
+    text-align: justify;
+    @include fontSize(2.3);
+    @include mqSm {
+        @include fontSize(1.1, sp);
+    };
 }
 .text {
     // padding:
     @include fontSize(2.2);
+    @include mqSm {
+        @include fontSize(1, sp);
+    };
     // color:
 }
 .text-check {
     position: relative;
     color: $color-a;
     padding-left: 45px;
-    // text-indent: -0px;
-    @include fontSize(2.4);
     padding-bottom: 1.7rem;
+    @include fontSize(2.4);
+    // text-indent: -0px;
+    @include mqLg {
+        padding-bottom: 1.5vw;
+        padding-left: 3.75vw;
+        font-size: 2vw;
+        margin-left: 2.5vw;
+    };
+    @include mqSm {
+        padding-bottom: 3.5vw;
+        @include fontSize(1.3, sp);
+        padding-left: 8vw;
+    };
     &:before {
         content: "";
         background: url('../images/check.png') no-repeat;
@@ -59,6 +83,16 @@
         height: 33px;
         top: -5px;
         left: 0;
+        background-size: contain;
+        @include mqLg {
+            // left: 2vw;
+            width: 2.6vw;
+        };
+        @include mqSm {
+            // left: 2vw;
+            // top: -0.8vw;
+            width: 6vw;
+        };
     }
 }
 .tag {
@@ -69,6 +103,10 @@
         display: inline-block;
         border: 1px solid $link-color;
         @include fontSize(1.5);
+        @include mqSm {
+            line-height: 1.4;
+            @include fontSize(0.8, sp);
+        };
     }
 }
 // /*------------------- Form -------------------*/

@@ -7,10 +7,18 @@
     background-size: 100% 100%;
     padding: 95px 0 50px;
     a {
+        line-height: 1.8;
         color: $color-a;
+        @include mqSm {
+            @include fontSize(1, sp);
+        };
+    }
+    span {
+        padding: 0 8px;
     }
     .listItems {
         justify-content: center;
+        align-items: center;
         margin: auto;
     }
     .copyright {

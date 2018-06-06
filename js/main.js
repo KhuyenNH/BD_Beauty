@@ -1,3 +1,5 @@
+var widthBr = $(window).width();
+
 $(document).ready(function() {
     if (widthBr < 640) {
         var posScroll = 0;
@@ -6,8 +8,6 @@ $(document).ready(function() {
         });
     }
 });
-
-var widthBr = $(window).width();
 
 /* Resize swap images
 -------------------------------------- */
@@ -30,7 +30,6 @@ $(window).on('load', function() {
     $('.local_02 .title_h5').matchHeight();
     $('.local_02 .items .text').matchHeight();
 });
-
 
 /* Scrool bookmark
 -------------------------------------- */

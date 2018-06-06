@@ -6,6 +6,15 @@
     background: url('../images/bg_footer.jpg') repeat-x;
     background-size: 100% 100%;
     padding: 95px 0 50px;
+    .point {
+        text-align: center;
+        margin-top: -50px;
+        margin-bottom: 50px;
+        font-size: 1.2em;
+        a {
+            font-size: 1.3em;
+        }
+    }
     a {
         line-height: 1.8;
         color: $color-a;

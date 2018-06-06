@@ -115,49 +115,84 @@
         .avatar {
             padding-left: 25px;
             // max-width: 346px;
-            width: 29%;
+            width: 28%;
         }
         .description {
             text-align: center;
             // padding-top: 65px;
-            padding-left: 51px;
+            padding-left: 15px;
             // max-width: 654px;
             width: 100%;
-            max-width: 492px;
+            max-width: 658px;
             margin: auto;
             @include mqLg {
-                width: 71%;
+                width: 72%;
                 padding-left: 4.3vw;
             };
         }
         .txt_img {
             text-align: center;
+            position: relative;
             img {
                 // width: 94.5%;
                 @include mqLg {
-                    width: 35vw;
+                    width: 51vw;
                 };
                 @include mqSm {
                     width: 100%;
                 };
             }
+            // > span.caption {
+            //     color: #27516E;
+            //     font-size: 0.5rem;
+            //     position: absolute;
+            //     top: 185px;
+            //     right: -20px;
+            //     @include mqSm {
+            //         top:35vw;
+            //         left: 50%;
+            //         text-align: center;
+            //     };
+            // }
         }
         .txt_01 {
             border-top: 1px solid $link-color;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            // max-width: 520px;
+            max-width: 492px;
+            flex-wrap: wrap;
             margin: auto;
             margin-top: 15px;
             padding-top: 5px;
             color: $link-color;
             text-align: left;
+            @include mqLg {
+                max-width: 41vw;
+            }
             @include mqSm {
+                max-width: 100%;
                 flex-direction: column;
             }
             .text {
                 @include fontSize(1.8);
+                @include mqLg {
+                    font-size: 1.5vw;
+                }
+            }
+            .caption {
+                padding-top: 10px;
+                text-align: right;
+                width: 100%;
+                color: #27516E;
+                @include fontSize(1.2);
+                @include mqSm {
+                    text-align: center;
+                    @include fontSize(0.8, sp);
+                    // top:35vw;
+                    // left: 50%;
+                    // text-align: center;
+                };
             }
         }
         .tag span {
@@ -361,6 +396,7 @@
             };
         }
         .txt_img {
+            position: relative;
             text-align: center;
             @include mqLg {
                 img {
@@ -368,6 +404,19 @@
                     width: 69.5%;
                 }
             };
+            // > span.caption {
+            //     color: #fff;
+            //     font-size: 0.5rem;
+            //     position: absolute;
+            //     top: 150px;
+            //     right: 0px;
+            //     @include mqSm {
+            //         top:20vw;
+            //         right: 0;
+            //         left: 7vw;
+            //         font-size: 0.1rem;
+            //     };
+            // }
         }
         .txt_01 {
             // width: 470px;
@@ -376,8 +425,8 @@
             margin-top: 20px;
             color: $color-a;
             text-align: center;
-            @include mqLg {
-                // width: 39vw;
+            @include mqSm {
+                margin-top: 10vw;
             };
             .text {
                 padding-bottom: 8px;
@@ -393,12 +442,25 @@
                     border: 1px solid $color-a;
                 }
             }
+            .caption {
+                padding-top: 10px;
+                width: 100%;
+                @include fontSize(1.2);
+                @include mqSm {
+                    text-align: center;
+                    @include fontSize(0.8, sp);
+                    // top:35vw;
+                    // left: 50%;
+                    // text-align: center;
+                };
+            }
         }
         .avatar {
             // width: 190px;
             width: 38%;
             // padding-left: 165px;
-            @include mqLg {
+            @include mqSm {
+                width: 30%;
                 // width: 15.8vw;
             };
         }
@@ -407,6 +469,9 @@
             width: 62%;
             @include mqLg {
                 // width: 39.5vw;
+            };
+            @include mqSm {
+                width: 70%;
             };
             span {
                 @include fontSize(2.1);
@@ -429,7 +494,7 @@
         background: url('../images/bg_02.jpg') no-repeat top center;
         background-size: cover;
         color: $link-color;
-        padding: 3rem 0 7rem;
+        padding: 10rem 0 7rem;
     }
     .title_section {
         padding-top: 1rem;

@@ -413,31 +413,32 @@ button:focus, input:focus, a:focus {
 
 .local_01 .row_01 .avatar {
   padding-left: 25px;
-  width: 29%;
+  width: 28%;
 }
 
 .local_01 .row_01 .description {
   text-align: center;
-  padding-left: 51px;
+  padding-left: 15px;
   width: 100%;
-  max-width: 492px;
+  max-width: 658px;
   margin: auto;
 }
 
 @media only screen and (max-width: 1200px) {
   .local_01 .row_01 .description {
-    width: 71%;
+    width: 72%;
     padding-left: 4.3vw;
   }
 }
 
 .local_01 .row_01 .txt_img {
   text-align: center;
+  position: relative;
 }
 
 @media only screen and (max-width: 1200px) {
   .local_01 .row_01 .txt_img img {
-    width: 35vw;
+    width: 51vw;
   }
 }
 
@@ -458,6 +459,9 @@ button:focus, input:focus, a:focus {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  max-width: 492px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: auto;
   margin-top: 15px;
   padding-top: 5px;
@@ -465,8 +469,15 @@ button:focus, input:focus, a:focus {
   text-align: left;
 }
 
+@media only screen and (max-width: 1200px) {
+  .local_01 .row_01 .txt_01 {
+    max-width: 41vw;
+  }
+}
+
 @media only screen and (max-width: 640px) {
   .local_01 .row_01 .txt_01 {
+    max-width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -476,6 +487,28 @@ button:focus, input:focus, a:focus {
 
 .local_01 .row_01 .txt_01 .text {
   font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .local_01 .row_01 .txt_01 .text {
+    font-size: 1.5vw;
+  }
+}
+
+.local_01 .row_01 .txt_01 .caption {
+  padding-top: 10px;
+  text-align: right;
+  width: 100%;
+  color: #27516E;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 640px) {
+  .local_01 .row_01 .txt_01 .caption {
+    text-align: center;
+    font-size: 8px;
+    font-size: 2.5vw;
+  }
 }
 
 .local_01 .row_01 .tag span {
@@ -734,6 +767,7 @@ button:focus, input:focus, a:focus {
 }
 
 .local_01 .row_05 .txt_img {
+  position: relative;
   text-align: center;
 }
 
@@ -749,6 +783,12 @@ button:focus, input:focus, a:focus {
   margin-top: 20px;
   color: #ffffff;
   text-align: center;
+}
+
+@media only screen and (max-width: 640px) {
+  .local_01 .row_05 .txt_01 {
+    margin-top: 10vw;
+  }
 }
 
 .local_01 .row_05 .txt_01 .text {
@@ -768,12 +808,38 @@ button:focus, input:focus, a:focus {
   border: 1px solid #ffffff;
 }
 
+.local_01 .row_05 .txt_01 .caption {
+  padding-top: 10px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 640px) {
+  .local_01 .row_05 .txt_01 .caption {
+    text-align: center;
+    font-size: 8px;
+    font-size: 2.5vw;
+  }
+}
+
 .local_01 .row_05 .avatar {
   width: 38%;
 }
 
+@media only screen and (max-width: 640px) {
+  .local_01 .row_05 .avatar {
+    width: 30%;
+  }
+}
+
 .local_01 .row_05 .description {
   width: 62%;
+}
+
+@media only screen and (max-width: 640px) {
+  .local_01 .row_05 .description {
+    width: 70%;
+  }
 }
 
 .local_01 .row_05 .description span {
@@ -798,7 +864,7 @@ button:focus, input:focus, a:focus {
   background: url("../images/bg_02.jpg") no-repeat top center;
   background-size: cover;
   color: #145a78;
-  padding: 3rem 0 7rem;
+  padding: 10rem 0 7rem;
 }
 
 .local_02 .title_section {
@@ -1008,6 +1074,17 @@ button:focus, input:focus, a:focus {
   padding: 95px 0 50px;
 }
 
+.footer .point {
+  text-align: center;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  font-size: 1.2em;
+}
+
+.footer .point a {
+  font-size: 1.3em;
+}
+
 .footer a {
   line-height: 1.8;
   color: #ffffff;
@@ -1042,7 +1119,7 @@ button:focus, input:focus, a:focus {
 /*  Helper
 ------------------------------------*/
 .is_pc {
-  display: inherit;
+  display: block;
 }
 
 .is_sp {
@@ -1187,16 +1264,16 @@ button:focus, input:focus, a:focus {
     -ms-flex-align: center;
     align-items: center;
   }
-  .listTag .title_tw * {
-    width: 50%;
-    padding: 0 1px;
+  .listTag .title_tw .img_text, .listTag .title_tw a {
+    width: 30%;
+    padding: 0 2px;
   }
   .listTag .items_tag {
     padding-top: 2.6vw;
     width: calc(50% - 2vw);
   }
   .main_visual {
-    height: 67vh;
+    height: auto;
     margin-bottom: 20vh;
     background: url("../images/bg_main_sp.jpg") no-repeat top left;
     background-size: cover;
@@ -1233,12 +1310,13 @@ button:focus, input:focus, a:focus {
     left: 2vw;
   }
   .main_visual_02 {
-    height: 42vh;
+    height: 43vh;
     padding-top: 0px;
     margin-bottom: 16.6vh;
   }
   .main_visual_02 .title_main {
     width: 74%;
+    padding-bottom: 5vw;
   }
   .main_visual_02 .highlight {
     bottom: -16.6vh;
@@ -1395,7 +1473,7 @@ button:focus, input:focus, a:focus {
   .local_02 .wrap_12 {
     background: url("../images/bg_02.jpg") no-repeat top left;
     background-size: cover;
-    padding: 5vw 0;
+    padding: 10vw 0 8vw;
   }
   .local_02 .title_section .ico_spf {
     top: calc(50% - 25%);
@@ -1432,5 +1510,15 @@ button:focus, input:focus, a:focus {
   }
   .footer {
     padding: 10vw 0 6vw;
+  }
+  .footer .point {
+    text-align: center;
+    margin-top: 1vw;
+    margin-bottom: 5vw;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  .footer .point a {
+    font-size: 1em;
   }
 }
